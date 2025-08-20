@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Avatar, Box, Button, Checkbox, CircularProgress, CssBaseline, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material';
+import { Avatar, Box, Button, Checkbox, CircularProgress, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material';
 import * as yup from 'yup';
 import { useAuthContext } from '../../contexts';
 import { Copyright } from '@mui/icons-material';

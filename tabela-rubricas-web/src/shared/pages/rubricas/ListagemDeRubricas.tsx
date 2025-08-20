@@ -3,7 +3,7 @@ import { FerramentasDaListagem } from "../../components"
 import { LayoutBaseDePagina } from "../../layouts"
 import { useEffect, useMemo, useState } from "react";
 import { useDebounce } from "../../hooks/UseDebounce";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Icon, IconButton, LinearProgress, List, ListItem, ListItemText, Pagination, Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow, Typography } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, LinearProgress, List, ListItem, ListItemText, Pagination, Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow, Typography } from "@mui/material";
 import { Environment } from "../../environment";
 import type { IListRubrica } from "../../services/rubricas/RubricasService";
 import { rubricas } from "../../data/rubricas/Rubricas";

@@ -1,7 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LayoutBaseDePagina } from "../../layouts";
 import { useEffect, useState } from "react";
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, Container, Grid, IconButton, LinearProgress, TextField, Typography } from "@mui/material";
+import { Avatar, Button, Card, CardActions, CardContent, CardHeader, Container, Grid, LinearProgress, TextField, Typography } from "@mui/material";
 import { useVForm, type IVFormErros } from "../../forms";
 import * as yup from "yup";
 // import FacebookIcon from '@mui/icons-material/Facebook';
@@ -30,9 +30,8 @@ const formValidationSchema: yup.Schema<IUserInfo> = yup.object().shape({
 });
 
 export const UserProfile: React.FC = () => {
-    const { id = 'nova' } = useParams<'id'>();
     const navigate = useNavigate();
-    const { formRef, save, saveAndClose, isSaveAndClose } = useVForm();
+    const { formRef, saveAndClose } = useVForm();
     
     const [user, setUser] = useState<IUserInfo | null>(null);
     const [isLoading, setIsLoading] = useState(false);
