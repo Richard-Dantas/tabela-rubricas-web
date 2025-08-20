@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material';
 import { blue, cyan } from '@mui/material/colors';
-//import '@fontsource/inter';
+import '@fontsource/inter';
 
 export const LightTheme = createTheme({
   palette: {
