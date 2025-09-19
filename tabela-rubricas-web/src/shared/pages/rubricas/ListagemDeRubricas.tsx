@@ -200,23 +200,23 @@ export const ListagemDeRubricas: React.FC = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>INSS</TableCell>
-                    <TableCell>{selectedRubrica.inss?.cod ?? "-"}</TableCell>
-                    <TableCell>{selectedRubrica.inss?.base_legal ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.inss_cod ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.inss_base_legal ?? "-"}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>IRRF</TableCell>
-                    <TableCell>{selectedRubrica.irrf?.cod ?? "-"}</TableCell>
-                    <TableCell>{selectedRubrica.irrf?.base_legal ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.irrf_cod ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.irrf_base_legal ?? "-"}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>FGTS</TableCell>
-                    <TableCell>{selectedRubrica.fgts?.cod ?? "-"}</TableCell>
-                    <TableCell>{selectedRubrica.fgts?.base_legal ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.fgts_cod ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.fgts_base_legal ?? "-"}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>PIS</TableCell>
-                    <TableCell>{selectedRubrica.pis?.cod ?? "-"}</TableCell>
-                    <TableCell>{selectedRubrica.pis?.base_legal ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.pis_cod ?? "-"}</TableCell>
+                    <TableCell>{selectedRubrica.pis_base_legal ?? "-"}</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
