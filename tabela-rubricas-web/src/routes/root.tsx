@@ -1,11 +1,11 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
-import { Login } from "../shared/pages";
+// import { Login } from "../shared/pages";
 import { CompactProvider, UseDrawerContext } from "../shared/contexts";
 import { useEffect } from "react";
 import PrivateRoute from "../shared/pages/private-route/PrivateRoute";
 import { Box } from "@mui/material";
 import { ListagemDeRubricas } from "../shared/pages/rubricas/ListagemDeRubricas";
-import { MenuLateral } from "../shared/components/menu-lateral/MenuLateral";
+// import { MenuLateral } from "../shared/components/menu-lateral/MenuLateral";
 import { UserProfile } from "../shared/pages/user-profile/UserProfile";
 
 export const router = createBrowserRouter([
@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
+      {
+        path: "/",
+        element: <ListagemDeRubricas />,
+      },
       // {
       //   path: "/pagina-inicial",
       //   element:  (
@@ -78,6 +82,15 @@ function Layout() {
   const { setDrawerOptions } = UseDrawerContext();
 
     useEffect(() => {
+      if (window.self === window.top) {
+        // está acessando direto no navegador
+        document.body.innerHTML = "<h1>Acesso direto não permitido</h1>";
+      } else {
+        const ref = document.referrer;
+        if (!ref.includes("academy.nith.com.br")) {
+          document.body.innerHTML = "<h1>Acesso negado</h1>";
+        }
+      }
       setDrawerOptions([
         {
           icon: 'home',
@@ -107,14 +120,14 @@ function Layout() {
       ]);
     }, []);
   return (
-    <Login>
+    // <Login>
       <CompactProvider>
         <Box
           display="flex"
           flexDirection="column"
           minHeight="100vh" // Garante que o layout ocupa a altura total da tela
         >
-          <MenuLateral>
+          {/* <MenuLateral> */}
             <Box 
               display="flex"
               flexDirection="column"
@@ -132,9 +145,9 @@ function Layout() {
               {/* Footer: vai ficar sempre abaixo do conteúdo */}
               {/* <Footer /> */}
             </Box>
-          </MenuLateral>
+          {/* </MenuLateral> */}
         </Box>
       </CompactProvider>
-    </Login> 
+    // </Login> 
   );
 }
